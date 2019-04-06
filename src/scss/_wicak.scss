@@ -1,0 +1,188 @@
+/* |===============================|
+ * | Below is imported From Wicak  |
+ * |===============================|
+ */
+ 
+ $colors: (
+    primary  : #3498db,
+    info     : #24cabc,
+    warning  : #f39c12,
+    success  : #2ecc71,
+    danger   : #e74c3c,
+    secondary: #999,
+    light    : #ddd,
+    black    : #000,
+);
+
+@font-face {
+    font-family: aileron;
+    src: url(../font/Aileron-Regular.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -15px;
+}
+
+.border {
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+/* |====================|
+ * | CSS for Column     |
+ * |====================|
+ */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        max-width: percentage($i/12);
+    }
+}
+
+/* |====================|
+ * | CSS for Margin     |
+ * |====================|
+ */
+@for $i from 1 through 4 {
+    .mt-#{$i} {
+        margin-top: #{$i}em;
+    }
+}
+@for $i from 1 through 4 {
+    .mr-#{$i} {
+        margin-left: #{$i}em;
+    }
+}
+@for $i from 1 through 4 {
+    .mb-#{$i} {
+        margin-bottom: #{$i}em;
+    }
+}
+@for $i from 1 through 4 {
+    .ml-#{$i} {
+        margin-right: #{$i}em;
+    }
+}
+
+/* |====================|
+ * | CSS for Padding    |
+ * |====================|
+ */
+@for $i from 1 through 4 {
+    .pt-#{$i} {
+        padding-top: #{$i}em;
+    }
+}
+@for $i from 1 through 4 {
+    .pr-#{$i} {
+        padding-left: #{$i}em;
+    }
+}
+@for $i from 1 through 4 {
+    .pb-#{$i} {
+        padding-bottom: #{$i}em;
+    }
+}
+@for $i from 1 through 4 {
+    .pl-#{$i} {
+        padding-right: #{$i}em;
+    }
+}
+    
+/* |===================|
+ * | CSS for button    |
+ * |===================|
+ */
+.btn {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+    outline: 0;
+}
+
+@each $name, $color in $colors {
+    .btn-#{$name} {
+        background-color: $color;
+    }
+}
+
+/* |=============================|
+ * | CSS for background color    |
+ * |=============================|
+ */
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background-color: $color;
+    }
+}
+
+/* |=================|
+ * | CSS for text    |
+ * |=================|
+ */
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+@each $name, $color in $colors {
+    .text-#{$name} {
+        color: $color !important;
+    }
+}
+
+/* |===================|
+ * | CSS for border    |
+ * |===================|
+ */
+.border {
+    width: auto;
+    height: auto;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+@each $name, $color in $colors {
+    .border-#{$name} {
+        border-color: $color !important;
+    }
+}
