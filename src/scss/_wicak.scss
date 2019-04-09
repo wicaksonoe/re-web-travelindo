@@ -2,16 +2,52 @@
  * | Below is imported From Wicak  |
  * |===============================|
  */
- 
- $colors: (
-    primary  : #3498db,
-    info     : #24cabc,
-    warning  : #f39c12,
-    success  : #2ecc71,
-    danger   : #e74c3c,
-    secondary: #999,
-    light    : #ddd,
-    black    : #000,
+$colors: (
+    primary  : (
+        background-color: #3498db,
+        border          : 2px solid darken(#3498db, 10%),
+        color           : lighten(#3498db, 40%)
+    ),
+    info     : (
+        background-color: #24cabc,
+        border          : 2px solid darken(#24cabc, 10%),
+        color           : lighten(#24cabc, 60%)
+    ),
+    warning  : (
+        background-color: #f39c12,
+        border          : 2px solid darken(#f39c12, 10%),
+        color           : lighten(#f39c12, 40%)
+    ),
+    success  : (
+        background-color: #2ecc71,
+        border          : 2px solid darken(#2ecc71, 10%),
+        color           : lighten(#2ecc71, 40%)
+    ),
+    danger   : (
+        background-color: #e74c3c,
+        border          : 2px solid darken(#e74c3c, 10%),
+        color           : lighten(#e74c3c, 40%)
+    ),
+    secondary: (
+        background-color: #999,
+        border          : 2px solid darken(#999, 10%),
+        color           : lighten(#999, 40%)
+    ),
+    light    : (
+        background-color: #ddd,
+        border          : 2px solid darken(#ddd, 10%),
+        color           : darker(#ddd, 40%)
+    ),
+    white    : (
+        background-color: #fff,
+        border          : 2px solid darken(#fff, 10%),
+        color           : black
+    ),
+    black    : (
+        background-color: #313131,
+        border          : 2px solid darken(#313131, 10%),
+        color           : lighten(#313131, 60%)
+    )
 );
 
 @font-face {
@@ -23,6 +59,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-family: aileron;
 }
 
 body {
@@ -41,6 +81,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     margin: 0 -15px;
+    padding: 8px 0;
 }
 
 .border {
@@ -76,7 +117,7 @@ body {
 }
 @for $i from 1 through 4 {
     .mr-#{$i} {
-        margin-left: #{$i}em;
+        margin-right: #{$i}em;
     }
 }
 @for $i from 1 through 4 {
@@ -86,7 +127,7 @@ body {
 }
 @for $i from 1 through 4 {
     .ml-#{$i} {
-        margin-right: #{$i}em;
+        margin-left: #{$i}em;
     }
 }
 
@@ -101,7 +142,7 @@ body {
 }
 @for $i from 1 through 4 {
     .pr-#{$i} {
-        padding-left: #{$i}em;
+        padding-right: #{$i}em;
     }
 }
 @for $i from 1 through 4 {
@@ -111,7 +152,7 @@ body {
 }
 @for $i from 1 through 4 {
     .pl-#{$i} {
-        padding-right: #{$i}em;
+        padding-left: #{$i}em;
     }
 }
     
@@ -125,12 +166,19 @@ body {
     text-decoration: none;
     display: inline-block;
     border-radius: 10px;
+    padding: 8px 15px;
     outline: 0;
 }
 
-@each $name, $color in $colors {
+.btn:hover {
+    cursor: pointer;
+}
+
+@each $name, $style in $colors {
     .btn-#{$name} {
-        background-color: $color;
+        @each $prop, $value in $style {
+            #{$prop}: $value;
+        }
     }
 }
 
@@ -138,9 +186,9 @@ body {
  * | CSS for background color    |
  * |=============================|
  */
-@each $name, $color in $colors {
+@each $name, $style in $colors {
     .bg-#{$name} {
-        background-color: $color;
+        background-color: map-get($style, background-color);
     }
 }
 
@@ -148,6 +196,7 @@ body {
  * | CSS for text    |
  * |=================|
  */
+
 .text-center {
     text-align: center !important;
 }
@@ -164,9 +213,9 @@ body {
     text-align: justify !important;
 }
 
-@each $name, $color in $colors {
+@each $name, $style in $colors {
     .text-#{$name} {
-        color: $color !important;
+        color: map-get($style, background-color) !important;
     }
 }
 
@@ -181,8 +230,38 @@ body {
     border-radius: 10px;
 }
 
-@each $name, $color in $colors {
+@each $name, $style in $colors {
     .border-#{$name} {
-        border-color: $color !important;
+        border-color: map-get($style, background-color) !important;
     }
+}
+
+/* |======================|
+ * | CSS for component    |
+ * |======================|
+ */
+.testimonial {
+    background-color: cyan;
+    width: 100%;
+}
+
+.guides {
+    width: 100%;
+}
+
+footer {
+    min-height: 250px;
+    background-color: grey;
+    width: 100%;
+}
+
+/* |=====================|
+ * | CSS for utilites    |
+ * |=====================|
+ */
+.align-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
 }

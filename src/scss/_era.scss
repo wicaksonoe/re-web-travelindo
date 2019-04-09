@@ -14,13 +14,14 @@
 nav{
     display: inline-block;
     width: 100%;
-    background-color: skyblue;
 }
 
 .nav{
     position: relative;
     display: block;
     max-height: 58px;
+    width: 100%;
+    background-color: skyblue;
 }
 
 
@@ -52,7 +53,8 @@ a{
 }
 
 .jumbotron {
-	position: relative;
+    position: relative;
+    width: 100%;
 }
 
 .welcome-text {
@@ -62,7 +64,6 @@ a{
 	-webkit-transform: translate(-50%, -50%);
 	color: #ffffff;
 	text-align: center;
-	background-color: orange;
 	font-size: 25pt;
 }
 
