@@ -106,6 +106,12 @@ body {
     }
 }
 
+@for $i from 1 through 12 {
+    .offset-#{$i} {
+        margin-left: percentage($i/12);
+    }
+}
+
 /* |====================|
  * | CSS for Margin     |
  * |====================|
@@ -165,8 +171,8 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 10px;
-    padding: 8px 15px;
+    border-radius: 20px;
+    padding: 8px 25px;
     outline: 0;
 }
 
@@ -224,8 +230,6 @@ body {
  * |===================|
  */
 .border {
-    width: auto;
-    height: auto;
     border: 2px solid;
     border-radius: 10px;
 }
