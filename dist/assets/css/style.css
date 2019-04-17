@@ -139,6 +139,8 @@ body {
 .row {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0 -15px;
   padding: 8px 0; }
 
@@ -527,6 +529,15 @@ footer {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%); }
+
+.testi-avatar {
+  vertical-align: middle;
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 7px solid;
+  margin: auto; }
 
 /* |====================================|
  * | Below is imported From Brati Dewi  |
