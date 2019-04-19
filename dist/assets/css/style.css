@@ -50,6 +50,7 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   color: #ffffff;
   text-align: center;
@@ -347,52 +348,68 @@ body {
   padding: 8px 25px;
   outline: 0; }
 
+.btn-sm {
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 4px 20px;
+  outline: 0; }
+
+.btn-login {
+  margin-top: 1em;
+  padding: 1em 0;
+  width: 100%;
+  border-radius: 10px; }
+
 .btn:hover {
   cursor: pointer; }
 
 .btn-primary {
   background-color: #3498db;
-  border: 2px solid #217dbb;
+  border: 1.5px solid #217dbb;
   color: #e1f0fa; }
 
 .btn-info {
   background-color: #24cabc;
-  border: 2px solid #1c9f94;
+  border: 1.5px solid #1c9f94;
   color: white; }
 
 .btn-warning {
   background-color: #f39c12;
-  border: 2px solid #c87f0a;
+  border: 1.5px solid #c87f0a;
   color: #fdedd4; }
 
 .btn-success {
   background-color: #2ecc71;
-  border: 2px solid #25a25a;
+  border: 1.5px solid #25a25a;
   color: #d1f5e0; }
 
 .btn-danger {
   background-color: #e74c3c;
-  border: 2px solid #d62c1a;
+  border: 1.5px solid #d62c1a;
   color: #fdf3f2; }
 
 .btn-secondary {
   background-color: #999;
-  border: 2px solid gray;
+  border: 1.5px solid gray;
   color: white; }
 
 .btn-light {
   background-color: #ddd;
-  border: 2px solid #c4c4c4;
+  border: 1.5px solid #c4c4c4;
   color: darker(#ddd, 40%); }
 
 .btn-white {
   background-color: #fff;
-  border: 2px solid #e6e6e6;
+  border: 1.5px solid #e6e6e6;
   color: black; }
 
 .btn-black {
   background-color: #313131;
-  border: 2px solid #181818;
+  border: 1.5px solid #181818;
   color: #cacaca; }
 
 /* |=============================|
@@ -504,6 +521,58 @@ body {
 .border-black {
   border-color: #313131 !important; }
 
+/* |=================|
+ * | CSS for card    |
+ * |=================|
+ */
+.card {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px; }
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  background-color: grey;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0; }
+
+.card-image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0; }
+
+.card-content {
+  width: 100%;
+  height: 200px;
+  padding: 1em; }
+
+.card-content > p {
+  font-size: 12px; }
+
+/* |=================|
+ * | CSS for form    |
+ * |=================|
+ */
+.form-group {
+  margin: 1.5em 0; }
+
+.form-group > input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 15px;
+  display: block;
+  background: none;
+  outline: none;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  transition: 0.25s; }
+
+.form-group > input:focus {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+
 /* |======================|
  * | CSS for component    |
  * |======================|
@@ -520,16 +589,6 @@ footer {
   background-color: grey;
   width: 100%; }
 
-/* |=====================|
- * | CSS for utilites    |
- * |=====================|
- */
-.align-middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%); }
-
 .testi-avatar {
   vertical-align: middle;
   width: 120px;
@@ -538,6 +597,55 @@ footer {
   border-radius: 50%;
   border: 7px solid;
   margin: auto; }
+
+.login {
+  width: 100%;
+  height: 100vh; }
+
+.login > .background {
+  width: 100%;
+  height: 50vh;
+  background-color: #3498db; }
+
+.login > .content {
+  box-sizing: border-box;
+  padding: 2em;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  background-color: white; }
+
+.login > .content img {
+  margin: 1em 4em 2em 4em;
+  width: 250px; }
+
+/* |=====================|
+ * | CSS for utilites    |
+ * |=====================|
+ */
+.align-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.box-shadow {
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5); }
 
 /* |====================================|
  * | Below is imported From Brati Dewi  |
