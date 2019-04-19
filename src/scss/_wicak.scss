@@ -321,6 +321,51 @@ body {
 }
 
 /* |======================|
+ * | CSS for slider-image |
+ * |======================|
+ */
+.slider-image {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-color: grey;
+}
+
+.slider-image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	object-fit: cover;
+	object-position: center;
+	transition: 0.5s;
+}
+
+[id^="slide"]:checked + img {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.slider-nav {
+	margin: 1em auto;
+	text-align: center;
+}
+
+.slider-nav label {
+	cursor: pointer;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	border-radius: 50px;
+	background-color: lightgrey;
+	transition: 0.4s;
+	&:hover {
+		background-color: grey;
+	}
+}
+
+/* |======================|
  * | CSS for component    |
  * |======================|
  */
