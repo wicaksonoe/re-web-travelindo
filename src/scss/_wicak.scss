@@ -5,47 +5,47 @@
 $colors: (
     primary  : (
         background-color: #3498db,
-        border          : 2px solid darken(#3498db, 10%),
+        border          : 1.5px solid darken(#3498db, 10%),
         color           : lighten(#3498db, 40%)
     ),
     info     : (
         background-color: #24cabc,
-        border          : 2px solid darken(#24cabc, 10%),
+        border          : 1.5px solid darken(#24cabc, 10%),
         color           : lighten(#24cabc, 60%)
     ),
     warning  : (
         background-color: #f39c12,
-        border          : 2px solid darken(#f39c12, 10%),
+        border          : 1.5px solid darken(#f39c12, 10%),
         color           : lighten(#f39c12, 40%)
     ),
     success  : (
         background-color: #2ecc71,
-        border          : 2px solid darken(#2ecc71, 10%),
+        border          : 1.5px solid darken(#2ecc71, 10%),
         color           : lighten(#2ecc71, 40%)
     ),
     danger   : (
         background-color: #e74c3c,
-        border          : 2px solid darken(#e74c3c, 10%),
+        border          : 1.5px solid darken(#e74c3c, 10%),
         color           : lighten(#e74c3c, 40%)
     ),
     secondary: (
         background-color: #999,
-        border          : 2px solid darken(#999, 10%),
+        border          : 1.5px solid darken(#999, 10%),
         color           : lighten(#999, 40%)
     ),
     light    : (
         background-color: #ddd,
-        border          : 2px solid darken(#ddd, 10%),
+        border          : 1.5px solid darken(#ddd, 10%),
         color           : darker(#ddd, 40%)
     ),
     white    : (
         background-color: #fff,
-        border          : 2px solid darken(#fff, 10%),
+        border          : 1.5px solid darken(#fff, 10%),
         color           : black
     ),
     black    : (
         background-color: #313131,
-        border          : 2px solid darken(#313131, 10%),
+        border          : 1.5px solid darken(#313131, 10%),
         color           : lighten(#313131, 60%)
     )
 );
@@ -178,6 +178,24 @@ body {
     outline: 0;
 }
 
+.btn-sm {
+	border: none;
+	text-align: center;
+	font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 4px 20px;
+    outline: 0;
+}
+
+.btn-login {
+	margin-top: 1em;
+	padding: 1em 0;
+	width: 100%;
+	border-radius: 10px;
+}
+
 .btn:hover {
     cursor: pointer;
 }
@@ -242,6 +260,66 @@ body {
     }
 }
 
+/* |=================|
+ * | CSS for card    |
+ * |=================|
+ */
+ .card {
+	width: 100%;
+	height: 350px;
+	border-radius: 10px;
+}
+
+.card-image {
+	width: 100%;
+	height: 150px;
+	background-color: grey;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+}
+
+.card-image > img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+	width: 100%;
+	height: 200px;
+	padding: 1em;
+}
+
+.card-content > p {
+	font-size: 12px;
+}
+
+/* |=================|
+ * | CSS for form    |
+ * |=================|
+ */
+.form-group {
+	margin: 1.5em 0;
+}
+
+.form-group > input {
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px 15px;
+	display: block;
+	background: none;
+	outline: none;
+	border: 2px solid #3498db;
+	border-radius: 10px;
+	transition: 0.25s;
+}
+
+.form-group > input:focus {
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
 /* |======================|
  * | CSS for component    |
  * |======================|
@@ -261,17 +339,6 @@ footer {
     width: 100%;
 }
 
-/* |=====================|
- * | CSS for utilites    |
- * |=====================|
- */
-.align-middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-}
-
 .testi-avatar {
 	vertical-align: middle;
 	width: 120px;
@@ -280,4 +347,61 @@ footer {
 	border-radius: 50%;
 	border: 7px solid;
 	margin: auto;
+}
+
+.login {
+	width: 100%;
+	height: 100vh;
+}
+
+.login > .background {
+	width: 100%;
+	height: 50vh;
+	background-color: #3498db;
+}
+
+.login > .content {
+	box-sizing: border-box;
+	padding: 2em;
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+	background-color: white;
+}
+
+.login > .content img {
+	margin: 1em 4em 2em 4em;
+	width: 250px;
+}
+
+/* |=====================|
+ * | CSS for utilites    |
+ * |=====================|
+ */
+.align-middle {
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.box-shadow {
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
 }
