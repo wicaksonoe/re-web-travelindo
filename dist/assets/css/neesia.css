@@ -1,0 +1,66 @@
+img{
+    width: 275px;
+    height: 183px;
+}
+
+.jumbotron-neesia {
+    position: relative;
+    width: 100%; }
+
+.slider-container{
+    /*width: 275px;
+    height: 183px;*/
+    position: relative;
+    overflow: hidden;
+}
+
+
+.slider-neesia {
+    clear: both;
+    overflow: hidden; }
+  
+.slider figure div {
+    width: 20%;
+    float: left; }
+  
+.slider figure img {
+    width: 100%;
+    float: left; }
+  
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 50s slidy infinite; }
+
+.slide-neesia{
+    /*width: 275px;
+    height: 183px;*/
+    position: absolute;
+    transition: left 0.75s;
+    float: left;
+}
+
+.slide-1{
+    background-image: url(../images/package/1.jpg);
+   /*width: 275px;
+    height: 183px;*/
+}
+
+.slide-2{
+    background-image: url(../images/package/2.jpg);
+   /*width: 275px;
+    height: 183px;*/
+}
+
+.slide-3{
+    background-image: url(../images/package/3.jpg);
+    /*width: 275px;
+    height: 183px;*/
+}
+.slide-4{
+    background-image: url(../images/package/4.jpg);
+    /*width: 275px;
+    height: 183px;*/
+}
