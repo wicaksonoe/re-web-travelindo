@@ -1,11 +1,13 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
+var gulp = require("gulp"),
+    sass = require("gulp-sass"),
+    cssbeautify = require("gulp-cssbeautify");
 
 sass.compiler = require("node-sass");
 
 gulp.task('build', function() {
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(cssbeautify())
         .pipe(gulp.dest('./dist/assets/css'));
 });
 
