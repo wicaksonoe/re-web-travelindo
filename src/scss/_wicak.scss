@@ -381,7 +381,8 @@ body {
 footer {
     min-height: 250px;
     background-color: grey;
-    width: 100%;
+	width: 100%;
+	padding: 2em 0;
 }
 
 .testi-avatar {
@@ -445,7 +446,7 @@ footer {
 	margin: auto;
 	margin-top: 5px !important;
 	width: 20%;
-	border: 2px solid orange;
+	border: 2px solid black;
 	border-radius: 50px;
 }
 
@@ -468,6 +469,46 @@ footer {
     
     &:hover {
         transform: scale(1.1);
+    }
+}
+
+table.responsive {
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table.responsive {
+	width: 100%;
+}
+
+table th {
+	background: grey;
+	color: white;
+}
+
+table tr:nth-of-type(odd) {
+	background: rgba(0, 0, 0, 0.05)
+}
+
+table tr:hover {
+	background: rgba(0, 0, 0, 0.05)
+}
+
+table th,
+table td {
+	padding: 15px;
+	border: 1px solid black;
+	word-break: break-all;
+}
+
+@for $i from 1 through 10 {
+    .tbl-#{$i} {
+        width: percentage($i/10);
     }
 }
 

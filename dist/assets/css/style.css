@@ -33,17 +33,26 @@ nav {
     padding: 0;
 }
 
-.navigasi ul li {
-    display: inline-block;
-    float: left;
-    margin: 20px;
-}
-
 .navigasi ul li a {
     position: relative;
+    display: inline-block;
+    float: left;
+    padding: 19px;
+    margin: 0 1px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #000000;
+}
+
+.navigasi ul li a:hover {
+    background-color: #5bbce4;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigasi ul li a.active {
+    background-color: #5bbce4;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 a {
@@ -801,6 +810,7 @@ footer {
     min-height: 250px;
     background-color: grey;
     width: 100%;
+    padding: 2em 0;
 }
 
 .testi-avatar {
@@ -865,8 +875,8 @@ footer {
     margin: auto;
     margin-top: 5px !important;
     width: 20%;
-    border: 2px solid orange;
-	border-radius: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
 }
 
 .gallery-photo {
@@ -889,6 +899,80 @@ footer {
 
 .gallery-photo > img:hover {
     transform: scale(1.1);
+}
+
+table.responsive {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table.responsive {
+    width: 100%;
+}
+
+table th {
+    background: grey;
+    color: white;
+}
+
+table tr:nth-of-type(odd) {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+table tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+table th,
+table td {
+    padding: 15px;
+    border: 1px solid black;
+    word-break: break-all;
+}
+
+.tbl-1 {
+    width: 10%;
+}
+
+.tbl-2 {
+    width: 20%;
+}
+
+.tbl-3 {
+    width: 30%;
+}
+
+.tbl-4 {
+    width: 40%;
+}
+
+.tbl-5 {
+    width: 50%;
+}
+
+.tbl-6 {
+    width: 60%;
+}
+
+.tbl-7 {
+    width: 70%;
+}
+
+.tbl-8 {
+    width: 80%;
+}
+
+.tbl-9 {
+    width: 90%;
+}
+
+.tbl-10 {
+    width: 100%;
 }
 
 /* |=====================|
