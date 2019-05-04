@@ -449,6 +449,28 @@ footer {
 	border-radius: 50px;
 }
 
+.gallery-photo {
+    position: relative;
+    padding: 0 !important;
+    height: 258px;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.gallery-photo > img {
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+    cursor: pointer;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 /* |=====================|
  * | CSS for utilites    |
  * |=====================|
