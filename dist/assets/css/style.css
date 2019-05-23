@@ -42,9 +42,10 @@ nav {
 .navigasi ul li a {
     position: relative;
     text-decoration: none;
-    text-transform: uppercase;
+  
     color: #000000;
 }
+
 
 a {
     color: #000000;
@@ -721,7 +722,7 @@ body {
 }
 
 .form-group > input {
-    width: 100%;
+    width: 40%;
     margin-top: 10px;
     padding: 10px 15px;
     display: block;
@@ -883,3 +884,16 @@ footer {
  * |===============================|
  */
 
+
+ /* |===============================|
+ * | era bagian edit team |
+ * |===============================|
+ */
+
+
+ /* |===============================|
+ * | era bagian edit team |
+ * |===============================|
+ */
+
+ 
