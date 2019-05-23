@@ -74,3 +74,24 @@
 	-ms-transform: scale(1.075);
 	transform: scale(1.075);
 }
+
+
+
+.team ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.team ul li {
+    display: inline-block;
+    float: left;
+    margin: 20px;
+}
+
+.team ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+}
+
