@@ -445,30 +445,6 @@ footer {
 	width: 250px;
 }
 
-.navigator > ul > li{
-	display: inline-block;
-	padding: 10px;
-	text-align: center;
-}
-
-.navigator a {
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-.navigator .active::after {
-	content: "";
-	text-align: center;
-	display: block;
-	margin: auto;
-	margin-top: 5px !important;
-	width: 20%;
-	border: 2px solid black;
-	border-radius: 50px;
-}
-
 .gallery-photo {
     position: relative;
     padding: 0 !important;
