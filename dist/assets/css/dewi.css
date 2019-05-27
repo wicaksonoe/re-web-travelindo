@@ -74,3 +74,61 @@
 	-ms-transform: scale(1.075);
 	transform: scale(1.075);
 }
+
+
+
+.team ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.team ul li {
+    display: inline-block;
+    float: left;
+    margin: 20px;
+}
+
+.team ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.form-group > textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 15px;
+    display: block;
+    background: none;
+    outline: none;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+.form-group > textarea:focus {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.box1{
+	width: 150px;
+	height: 150px;
+	background: white;
+	border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
