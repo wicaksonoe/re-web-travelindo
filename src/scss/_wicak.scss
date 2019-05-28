@@ -86,11 +86,6 @@ body {
     padding: 8px 0;
 }
 
-.border {
-    border-radius: 10px;
-    border: 1px solid;
-}
-
 /* |====================|
  * | CSS for Column     |
  * |====================|
@@ -443,62 +438,6 @@ footer {
 .login > .content img {
 	margin: 1em 4em 2em 4em;
 	width: 250px;
-}
-
-.gallery-photo {
-    position: relative;
-    padding: 0 !important;
-    height: 258px;
-    background-color: grey;
-    overflow: hidden;
-}
-
-.gallery-photo > img {
-    position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-    object-position: center;
-    transition: 0.5s;
-    cursor: pointer;
-    
-    &:hover {
-        transform: scale(1.1);
-    }
-}
-
-table.responsive {
-	width: 100%;
-	border: 1px solid black;
-	border-radius: 10px;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table.responsive {
-	width: 100%;
-}
-
-table th {
-	background: grey;
-	color: white;
-}
-
-table tr:nth-of-type(odd) {
-	background: rgba(0, 0, 0, 0.05)
-}
-
-table tr:hover {
-	background: rgba(0, 0, 0, 0.05)
-}
-
-table th,
-table td {
-	padding: 15px;
-	border: 1px solid black;
-	word-break: break-all;
 }
 
 @for $i from 1 through 10 {

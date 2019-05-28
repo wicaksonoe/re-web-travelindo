@@ -1,6 +1,6 @@
-/* |=============================|
- * | Below is imported From Era  |
- * |=============================|
+/* |=====================================|
+ * | Below is imported From Era & Melly  |
+ * |=====================================|
  */
 .navigasi img {
     display: block;
@@ -40,7 +40,6 @@ nav {
     padding: 19px;
     margin: 0 1px;
     text-decoration: none;
-    color: #000000;
     text-transform: uppercase;
 }
 
@@ -55,7 +54,6 @@ nav {
     cursor: pointer;
     transition: 0.3s;
 }
-
 
 a {
     color: #000000;
@@ -170,6 +168,103 @@ a {
     }
 }
 
+/* |========================================|
+ * | Css Era yang yg dibawah ini our guide  |
+ * |========================================|
+ */
+.our-team {
+    padding: 30px 0 50px;
+    background-color: #d1d0cd;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.our-team .picture {
+    display: inline-block;
+    width: 100px;
+}
+
+.picture > img {
+    object-fit: cover;
+}
+
+.our-team .picture img {
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.8);
+}
+
+.our-team .title {
+    font-size: 15px;
+    color: #4e5052;
+}
+
+.our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #1369ce;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+    bottom: 0;
+}
+
+.our-team .social li {
+    display: inline-block;
+}
+
+.our-team .social li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* |====================================|
+   * | Css Era yang diatas itu our guide |
+   * |====================================|
+   */
+.team ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.team ul li {
+    display: inline-block;
+    float: left;
+    margin: 20px;
+}
+
+.team ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+}
+
+/* |====================================|
+   * | Css BOX nya ra |
+   * |====================================|
+   */
+#box {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border: solid 3px black;
+    border-radius: 5px;
+}
+
 /* |===============================|
  * | Below is imported From Wicak  |
  * |===============================|
@@ -208,11 +303,6 @@ body {
     flex-wrap: wrap;
     margin: 0 -15px;
     padding: 8px 0;
-}
-
-.border {
-    border-radius: 10px;
-    border: 1px solid;
 }
 
 /* |====================|
@@ -876,62 +966,6 @@ footer {
     width: 250px;
 }
 
-.gallery-photo {
-    position: relative;
-    padding: 0 !important;
-    height: 258px;
-    background-color: grey;
-    overflow: hidden;
-}
-
-.gallery-photo > img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.gallery-photo > img:hover {
-    transform: scale(1.1);
-}
-
-table.responsive {
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-table.responsive {
-    width: 100%;
-}
-
-table th {
-    background: grey;
-    color: white;
-}
-
-table tr:nth-of-type(odd) {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-table tr:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
-table th,
-table td {
-    padding: 15px;
-    border: 1px solid black;
-    word-break: break-all;
-}
-
 .tbl-1 {
     width: 10%;
 }
@@ -1029,6 +1063,93 @@ table td {
  * | Below is imported From Brati Dewi  |
  * |====================================|
  */
+@-moz-keyframes gallery {
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes gallery {
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes gallery {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes gallery {
+    100% {
+        opacity: 1;
+    }
+}
+
+.gallery {
+    padding: 3.5em;
+    position: relative;
+    overflow: hidden;
+    min-height: 37em;
+}
+
+.gallery .content {
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -moz-justify-content: -moz-flex-start;
+    -webkit-justify-content: -webkit-flex-start;
+    -ms-justify-content: -ms-flex-start;
+    justify-content: flex-start;
+}
+
+.gallery .content .media {
+    -moz-animation: gallery 0.75s ease-out 0.4s forwards;
+    -webkit-animation: gallery 0.75s ease-out 0.4s forwards;
+    -ms-animation: gallery 0.75s ease-out 0.4s forwards;
+    animation: gallery 0.75s ease-out 0.4s forwards;
+    margin-bottom: 0;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
+    width: 25%;
+}
+
+.gallery .content .media a {
+    display: block;
+}
+
+.gallery .content .media img {
+    -moz-transition: -moz-transform 0.2s ease-in-out;
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    -ms-transition: -ms-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.gallery .content .media:hover img {
+    -moz-transform: scale(1.075);
+    -webkit-transform: scale(1.075);
+    -ms-transform: scale(1.075);
+    transform: scale(1.075);
+}
+
+.box1 {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border: 2px solid black;
+}
+
 /* |================================|
  * | Below is imported From Neesia  |
  * |================================|
