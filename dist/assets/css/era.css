@@ -15,7 +15,6 @@
   .our-team .picture {
     display: inline-block;
     width: 100px;
-    position: relative;
   }
 
   .picture > img{
@@ -64,11 +63,10 @@
   .our-team .social li a {
     padding: 10px;
     color: white;
-    transition: all 0.3s ease 0s;
     text-decoration: none;
   }
   
-  
+
   
   
   
@@ -78,3 +76,83 @@
    * | Css Era yang diatas itu our guide |
    * |====================================|
    */
+.team ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.team ul li {
+    display: inline-block;
+    float: left;
+    margin: 20px;
+}
+
+.team ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+}
+
+ /* |====================================|
+   * | Css BOX nya ra |
+   * |====================================|
+   */
+
+
+   #box{
+    width: 150px;
+    height: 150px;
+    background: white;
+    border: solid 3px black;
+    border-radius: 5px;
+    
+}
+
+ /* |====================================|
+   * | css kotak kotak  |
+   * |====================================|
+   */
+
+.menu {
+  list-style-type: none;
+
+
+}
+
+.menu > li {
+  float: left;
+  margin: 0 15px;
+}
+
+.menu > li > a {
+  text-decoration: none;
+}
+
+.menu > li.active::after {
+  content: "";
+  height: 3px;
+  width: 25%;
+  background-color: #000000;
+  display: block;
+  margin: auto;
+  margin-top: 7px;
+  border-radius: 25%;
+}
+
+table.responsive {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table.responsive  th, 
+table.responsive  td{
+  border: 1px solid black;
+  padding: 1em 0;
+}
+
+table.responsive td > img {
+  max-width: 100px;
+  max-height: 100px;
+}
