@@ -35,17 +35,24 @@ nav{
     padding: 0;
 }
 
-.navigasi ul li {
-    display: inline-block;
-    float: left;
-    margin: 20px;
-}
-
 .navigasi ul li a {
     position: relative;
+	display: inline-block;
+    float: left;
+	padding: 19px;
+	margin: 0 1px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #000000;
+	&:hover {
+		background-color: darken(skyblue, 10%);
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	&.active {
+		background-color: darken(skyblue, 10%);
+		cursor: pointer;
+		transition: 0.3s;
+	}
 }
 
 a{

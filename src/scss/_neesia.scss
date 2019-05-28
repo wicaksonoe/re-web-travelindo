@@ -2,3 +2,46 @@
  * | Below is imported From Neesia  |
  * |================================|
  */
+
+.menu {
+	list-style-type: none;
+
+
+}
+
+.menu > li {
+	float: left;
+	margin: 0 15px;
+}
+
+.menu > li > a {
+	text-decoration: none;
+}
+
+.menu > li.active::after {
+	content: "";
+	height: 3px;
+	width: 25%;
+	background-color: #000000;
+	display: block;
+	margin: auto;
+	margin-top: 7px;
+	border-radius: 25%;
+}
+
+table.responsive {
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table.responsive  th, 
+table.responsive  td{
+	border: 1px solid black;
+	padding: 1em 0;
+}
+
+table.responsive td > img {
+	max-width: 100px;
+	max-height: 100px;
+}
