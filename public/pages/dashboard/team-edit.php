@@ -10,17 +10,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Travelindo</title>
+	<title>Dashboard Team</title>
 	<link rel="stylesheet" href="<?php echo $base_url.'/assets/css/style.css';?>">
 </head>
 <body>
 
 	<?php
+		$page = 'team';
 		require_once(getcwd().'/components/navbar.php');
-		require_once(getcwd().'/components/home/jumbotron.php');
-		require_once(getcwd().'/components/home/package.php');
-		require_once(getcwd().'/components/home/guides.php');
-		require_once(getcwd().'/components/home/testimoni.php');
+		require_once(getcwd().'/components/dashboard/team-edit.php');
 		require_once(getcwd().'/components/footer.php');
 	?>
 
