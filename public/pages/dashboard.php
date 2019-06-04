@@ -57,7 +57,7 @@ switch ($section) {
 		
 	// Punya Neesia & Dewii
 	case 'testi-main':
-		require_once(getcwd().'');
+		require_once(getcwd().'/pages/dashboard/testimoni-main.php');
 		break;
 		
 	case 'testi-new':
