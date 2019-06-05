@@ -55,16 +55,16 @@ switch ($section) {
 
 	// Punya Era & Melly
 	case 'team-main':
-		require_once(getcwd().'');
+		require_once(getcwd().'/pages/dashboard/team-main.php');
 		break;
 		
 	case 'team-new':
-		require_once(getcwd().'');
+		require_once(getcwd().'/pages/dashboard/team-new.php');
 		break;
 		
 	case 'team-edit':
 		if ( isset($_GET['id']) ) {
-			require_once(getcwd().'');
+			require_once(getcwd().'/pages/dashboard/team-edit.php');
 		} else {
 			require_once(getcwd().'/pages/404-dashboard.php');
 		}

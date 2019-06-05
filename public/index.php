@@ -19,6 +19,15 @@ if ( isset($_GET['page']) ) {
 // Memilih halaman berdasarkan variabel $page
 switch ($page) {
 
+
+	case 'aboutus':
+		require_once('pages/aboutus.php');
+		break;
+
+	case 'team':
+		require_once('pages/team.php');		
+		break;
+
 	case 'login':
 		require_once('pages/login.php');
 		break;
