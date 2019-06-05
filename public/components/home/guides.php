@@ -3,6 +3,10 @@
 		die('Direct Access Not Allowed.');
 		exit();
 	}
+
+	require_once(getcwd().'/module/connection.php');
+
+	$query = "SELECT * FROM guides";
 ?>
 <div class="guides pb-4">
 	<div class="container">

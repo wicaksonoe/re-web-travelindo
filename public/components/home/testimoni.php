@@ -3,6 +3,10 @@
 		die('Direct Access Not Allowed.');
 		exit();
 	}
+
+	require_once(getcwd().'/module/connection.php');
+
+	$query = "SELECT * FROM testimonies";
 ?>
 <div class="testimoni pt-3 pb-4">
 	<div class="container">

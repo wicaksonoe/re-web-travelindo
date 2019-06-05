@@ -28,9 +28,25 @@ switch ($section) {
 		require_once(getcwd().'/pages/dashboard/package-new.php');
 		break;
 		
+	case 'pkg-detail':
+		if ( isset($_GET['id']) ) {
+			require_once(getcwd().'/pages/dashboard/package-detail.php');
+		} else {
+			require_once(getcwd().'/pages/404-dashboard.php');
+		}
+		break;
+		
 	case 'pkg-edit':
 		if ( isset($_GET['id']) ) {
 			require_once(getcwd().'/pages/dashboard/package-edit.php');
+		} else {
+			require_once(getcwd().'/pages/404-dashboard.php');
+		}
+		break;
+		
+	case 'pkg-delete':
+		if ( isset($_GET['id']) ) {
+			require_once(getcwd().'/pages/dashboard/package-delete.php');
 		} else {
 			require_once(getcwd().'/pages/404-dashboard.php');
 		}
