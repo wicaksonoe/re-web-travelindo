@@ -1,3 +1,9 @@
+<?php 
+	if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
+		die('Direct Access Not Allowed.');
+		exit();
+	}
+?>
 <div class="container pt-4">
     <div class="row">
         <div class="col-4 offset-1">

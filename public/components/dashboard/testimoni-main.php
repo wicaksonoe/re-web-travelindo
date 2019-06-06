@@ -1,3 +1,9 @@
+<?php
+if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
+    die('Direct Access Not Allowed.');
+    exit();
+}
+?>
 <div class="testimoni">
     <div class="container">
         <div class="row mb-2">
@@ -6,23 +12,9 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12">
-                <ul class="menu">
-                    <li>
-                        <a href="">Manage Package</a>
-                    </li>
-
-                    <li>
-                        <a href="">Manage Team</a>
-                    </li>
-
-                    <li class="active">
-                        <a href="">Manage Testimoni</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <?php
+			require_once('navigator.php');
+		?>
 
         <div class="row mt-4">
             <div class="col-12">
@@ -42,7 +34,7 @@
 
                     <tr>
                         <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url.'assets/images/testimoni/111.png';?>"></td>
+                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
                         <td class="pl-1">
                             <p class="mb-1">Nama : Lorem Ipsum</p>
                             <p>Testimoni</p>
@@ -54,7 +46,7 @@
 
                     <tr>
                         <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url.'assets/images/testimoni/111.png';?>"></td>
+                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
                         <td class="pl-1">
                             <p class="mb-1">Nama : Lorem Ipsum</p>
                             <p>Testimoni</p>
@@ -66,7 +58,7 @@
 
                     <tr>
                         <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url.'assets/images/testimoni/111.png';?>"></td>
+                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
                         <td class="pl-1">
                             <p class="mb-1">Nama : Lorem Ipsum</p>
                             <p>Testimoni</p>
@@ -78,7 +70,7 @@
 
                     <tr>
                         <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url.'assets/images/testimoni/111.png';?>"></td>
+                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
                         <td class="pl-1">
                             <p class="mb-1">Nama : Lorem Ipsum</p>
                             <p>Testimoni</p>
