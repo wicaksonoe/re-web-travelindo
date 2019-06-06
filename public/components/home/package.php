@@ -3,6 +3,10 @@
 		die('Direct Access Not Allowed.');
 		exit();
 	}
+
+	require_once(getcwd().'/module/connection.php');
+
+	$query_data = "SELECT * FROM packages";
 ?>
 <div class="package">
 	<div class="container pt-3 pb-3">

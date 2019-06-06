@@ -12,6 +12,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Travelindo</title>
 	<link rel="stylesheet" href="<?php echo $base_url.'/assets/css/style.css';?>">
+	<link rel="stylesheet" href="<?php echo $base_url.'/assets/font-awesome/css/all.css';?>">
 </head>
 <body>
 

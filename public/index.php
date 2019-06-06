@@ -22,8 +22,16 @@ switch ($page) {
 	case 'package-detail':
 		require_once('pages/package-detail.php');
 		break;
-	
-		case 'login':
+
+	case 'aboutus':
+		require_once('pages/aboutus.php');
+		break;
+
+	case 'team':
+		require_once('pages/team.php');		
+		break;
+
+	case 'login':
 		require_once('pages/login.php');
 		break;
 		
