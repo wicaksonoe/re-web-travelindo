@@ -77,12 +77,12 @@ switch ($section) {
 		break;
 		
 	case 'testi-new':
-		require_once(getcwd().'');
+		require_once(getcwd().'/pages/dashboard/testimoni-new.php');
 		break;
 		
 	case 'testi-edit':
 		if ( isset($_GET['id']) ) {
-			require_once(getcwd().'');
+			require_once(getcwd().'/pages/dashboard/testimoni-edit.php');
 		} else {
 			require_once(getcwd().'/pages/404-dashboard.php');
 		}
