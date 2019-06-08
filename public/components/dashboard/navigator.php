@@ -12,7 +12,7 @@
 					if($page == 'package') echo 'class="active"';
 				?>
 			>
-				<a href="">Manage Package</a>
+				<a href="<?php echo $base_url.'index.php?page=dashboard&section=pkg-main';?>">Manage Package</a>
 			</li>
 
 			<li

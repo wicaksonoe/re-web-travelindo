@@ -3,4 +3,5 @@
 		die('Direct Access Not Allowed.');
 		exit();
 	}
+	echo "404 Not Found";
 ?>

@@ -15,7 +15,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -27,7 +27,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -39,7 +39,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -51,7 +51,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -63,7 +63,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -75,7 +75,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -87,7 +87,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -99,7 +99,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -111,7 +111,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -123,7 +123,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -135,7 +135,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
@@ -147,7 +147,7 @@
 			<div class="col-3 mt-2">
 				<div class="card box-shadow">
 					<div class="card-image">
-						<img src="../assets/images/slider/slider1.jpg" alt="">
+						<img src="assets/images/slider/slider1.jpg" alt="">
 					</div>
 					<div class="card-content">
 						<h3>Lorem Ipsum</h3>
