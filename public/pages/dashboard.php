@@ -70,6 +70,16 @@ switch ($section) {
 		}
 		break;
 
+	case 'team-delete':
+		if ( isset($_GET['id']) ) {
+			require_once(getcwd().'/pages/dashboard/team-delete.php');
+		} else {
+			require_once(getcwd().'/pages/404-dashboard.php');
+		}
+		break;
+
+	
+
 		
 	// Punya Neesia & Dewii
 	case 'testi-main':
