@@ -5,8 +5,8 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
 }
 
 $hostname = "localhost";
-$username = "phpmyadmin";
-$password = "kosongin";
+$username = "root";
+$password = "";
 $database = "travelindo";
 
 $connection = mysqli_connect($hostname, $username, $password, $database);
