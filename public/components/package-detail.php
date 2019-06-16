@@ -3,54 +3,61 @@
 		die('Direct Access Not Allowed.');
 		exit();
 	}
+
+	require_once(getcwd().'/module/connection.php');
+
+	if ( isset($_GET['id']) ) {
+		$id = mysqli_real_escape_string($connection, $_GET['id']);
+
+		$query_data = "SELECT * FROM packages WHERE id_package=$id LIMIT 1";
+		$query_data_result = mysqli_query($connection, $query_data);
+
+		if ( mysqli_num_rows($query_data_result) != 1 ) {
+			die("404-Items Not Found");
+		}
+
+		$data = mysqli_fetch_assoc($query_data_result);
+			
+		$query_photo = "SELECT * FROM photos WHERE id_package=$id";
+		$query_photo_result = mysqli_query($connection, $query_photo);
+		while ( $photo_single = mysqli_fetch_assoc($query_photo_result) ) {
+			$data['photos'][] = $photo_single['photo_package'];
+		}
+		
+	} else {
+		die("404-Items Not Found");
+	}
+
 ?>
 <div class="container pt-4">
     <div class="row">
         <div class="col-4 offset-1">
             <div class="mb-4">
                 <div class="slider-image">
-                    <input type="radio" name="slide" id="slide-1" hidden checked>
-                    <img src="assets/images/package/1.jpg" alt="">
+					<?php foreach ($data['photos'] as $key => $value) { ?>
+						
+						<input type="radio" name="slide" id="slide-<?php echo $key?>" hidden checked>
+						<img src="assets/upload/package/<?php echo $value?>" alt="<?php echo $value?>">
 
-                    <input type="radio" name="slide" id="slide-2" hidden>
-                    <img src="assets/images/package/2.jpg" alt="">
+					<?php }?>
 
-                    <input type="radio" name="slide" id="slide-3" hidden>
-                    <img src="assets/images/package/3.jpg" alt="">
-
-                    <input type="radio" name="slide" id="slide-4" hidden>
-                    <img src="assets/images/package/4.jpg" alt="">
                 </div>
 
                 <div class="slider-nav">
-                    <label for="slide-1"></label>
-                    <label for="slide-2"></label>
-                    <label for="slide-3"></label>
-                    <label for="slide-4"></label>
+					<?php foreach ($data['photos'] as $key => $value) { ?>
+
+						<label for="slide-<?php echo $key?>"></label>
+
+					<?php }?>
                 </div>
             </div>
         </div>
 
         <div class="col-5 offset-1">
-            <h1> <b>Package Name</b></h1>
+            <h1><b><?php echo $data['title_package'] ?></b></h1>
             <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.</p>
-
-            <br>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            </p>
-
-            <br>
-            <p>Its your journey, your way</p>
-            <div class="row" style="float: left;">
-                <div class="col-12 mb-2 mt-2">
-                    <a href="" class="btn btn-primary">Book Now</a>
-                </div>
-            </div>
+			<p><?php echo $data['description_package'] ?></p>
+			
         </div>
     </div>
 </div>

@@ -6,6 +6,8 @@ ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 // +++++++++++++++++++++++++++++++++++++++
 
+session_start();
+
 // SET BASE URL
 $base_url = "http://localhost/re-web-travelindo/public/";
 
@@ -51,6 +53,10 @@ switch ($page) {
 		require_once('pages/dashboard.php');
 		break;
 		
+	case 'logout':
+		session_destroy();
+		header('location: '.$base_url.'index.php');
+		break;
 	case NULL:
 		require_once('pages/beranda.php');
 		break;
