@@ -4,15 +4,18 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
 	exit();
 }
 
-// Checking session
 
+// Checking session
+if ( !isset($_SESSION['login']) && $_SESSION['login'] != 1 ) {
+	header('location: '.$base_url.'index.php?page=login');
+}
 // ======================
 
 // Memberikan nilai awalan untuk menentukan akan menampilkan halaman apa
 if ( isset($_GET['section']) ) {
 	$section = $_GET['section'];
 } else {
-	$section = NULL;
+	header('location: '.$base_url.'index.php?page=dashboard&section=pkg-main');
 }
 
 // ============================================

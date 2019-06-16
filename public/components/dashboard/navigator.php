@@ -20,7 +20,7 @@
 					if($page == 'team') echo 'class="active"';
 				?>
 			>
-				<a href="">Manage Team</a>
+				<a href="<?php echo $base_url.'index.php?page=dashboard&section=team-main';?>">Manage Team</a>
 			</li>
 
 			<li
@@ -28,7 +28,7 @@
 					if($page == 'testimoni') echo 'class="active"';
 				?>
 			>
-				<a href="">Manage Testimoni</a>
+				<a href="<?php echo $base_url.'index.php?page=dashboard&section=testi-main';?>">Manage Testimoni</a>
 			</li>
 		</ul>
 	</div>
