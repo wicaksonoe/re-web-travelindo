@@ -100,7 +100,14 @@ switch ($section) {
 			require_once(getcwd().'/pages/404-dashboard.php');
 		}
 		break;
-	
+
+	case 'testi-delete':
+		if ( isset($_GET['id']) ) {
+			require_once(getcwd().'/pages/dashboard/testimoni-delete.php');
+		} else {
+			require_once(getcwd().'/pages/404-dashboard.php');
+		}
+		break;
 
 	// Route to NULL and Not Found
 	case NULL:
