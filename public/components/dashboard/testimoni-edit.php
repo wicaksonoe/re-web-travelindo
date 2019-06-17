@@ -5,10 +5,6 @@
 	$query = mysqli_query($connection,"SELECT * FROM testimonies where id_testimoni= $id limit 1");
 
 	$data =  mysqli_fetch_assoc($query);
-
-	echo "<pre>";
-	print_r ($data);
-	echo "</pre>";
 	
 	if($query->num_rows == 0)	{
 		header('location: '.$base_url.'index.php?page=dashboard&section=testi-main');
