@@ -2,7 +2,18 @@
 if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
     die('Direct Access Not Allowed.');
     exit();
-}
+    }
+
+    require_once(getcwd() . "/module/connection.php");
+    $query = "SELECT * FROM testimonies";
+    $result_query = mysqli_query($connection,$query);
+
+    $result_rows=[];
+    while($result_single_row = mysqli_fetch_assoc($result_query)){
+        $result_rows []=$result_single_row;
+    }
+
+    mysqli_close($connection);
 ?>
 <div class="testimoni">
     <div class="container">
@@ -13,12 +24,13 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
         </div>
 
         <?php
-			require_once('navigator.php');
-		?>
+        require_once('navigator.php');
+        ?>
 
         <div class="row mt-4">
             <div class="col-12">
-                <a href="" class="btn btn-primary">Create New</a>
+                <a href="<?php echo $base_url . "index.php?page=dashboard&section=testi-new" ?>" 
+                class="btn btn-primary">Create New</a>
             </div>
         </div>
 
@@ -32,53 +44,26 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
                         <th>Action</th>
                     </tr>
 
-                    <tr>
+                    <?php
+                    foreach ($result_rows as $key => $value) {
+                        echo
+                            '<tr>
                         <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
+                        <td class="text-center"><img src="assets/upload/testimoni/' . $value["photo_testimoni"] . '" alt=""></td>
                         <td class="pl-1">
-                            <p class="mb-1">Nama : Lorem Ipsum</p>
-                            <p>Testimoni</p>
-                            <p>Disini</p>
+                            <p class="mb-1">Nama:'.$value["title_testimoni"].'</a></p>
+                            <p class="mb-1">Testimoni:'.$value["description_testimoni"].'</a></p>
                         </td>
-                        <td class="text-center"><a href=" " class="btn btn-sm btn-primary">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger ml-2">Hapus</a></td>
-                    </tr>
-
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
-                        <td class="pl-1">
-                            <p class="mb-1">Nama : Lorem Ipsum</p>
-                            <p>Testimoni</p>
-                            <p>Disini</p>
-                        </td>
-                        <td class="text-center"><a href="" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger ml-2">Hapus</a></td>
-                    </tr>
-
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
-                        <td class="pl-1">
-                            <p class="mb-1">Nama : Lorem Ipsum</p>
-                            <p>Testimoni</p>
-                            <p>Disini</p>
-                        </td>
-                        <td class="text-center"><a href="" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger ml-2">Hapus</a></td>
-                    </tr>
-
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td class="text-center"><img src="<?php echo $base_url . 'assets/images/testimoni/111.png'; ?>"></td>
-                        <td class="pl-1">
-                            <p class="mb-1">Nama : Lorem Ipsum</p>
-                            <p>Testimoni</p>
-                            <p>Disini</p>
-                        </td>
-                        <td class="text-center"><a href="" class="btn btn-sm btn-primary">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger ml-2">Hapus</a></td>
-                    </tr>
+                        
+                        <td class="text-center">
+                            <a href="" class="btn btn-sm btn-primary ml-1">Edit</a>
+                        <a href="" class="btn btn-sm btn-danger">Hapus</a></td>
+                    </tr>';
+                    }
+                    ?>
+                
+            
+            
                 </table>
             </div>
         </div>
