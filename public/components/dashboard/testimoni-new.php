@@ -71,7 +71,7 @@
 
 						<div class="form-group">
 							<label><br> Testimoni </label><br><br>
-							<textarea name="description_testimoni" id="description_testimoni"></textarea>
+							<textarea name="description_testimoni" required></textarea>
 						</div>
 
 						<div class="form-group">

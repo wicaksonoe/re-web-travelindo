@@ -51,14 +51,14 @@ if (basename($_SERVER['PHP_SELF']) == basename(__FILE__)) {
                         <td class="text-center">1</td>
                         <td class="text-center"><img src="assets/upload/testimoni/' . $value["photo_testimoni"] . '" alt=""></td>
                         <td class="pl-1">
-                            <p class="mb-1">Nama:'.$value["title_testimoni"].'</a></p>
-                            <p class="mb-1">Testimoni:'.$value["description_testimoni"].'</a></p>
+                            <p class="mb-1">Nama: '.$value["title_testimoni"].'</a></p>
+                            <p class="mb-1">Testimoni: '.$value["description_testimoni"].'</a></p>
                         </td>
                         
                         <td class="text-center">
-													<a href="'.$base_url.'index.php?page=dashboard&section=testi-edit&id='.$value['id_testimoni'].'" class="btn btn-sm btn-primary ml-1">Edit</a>
-													<a href="'.$base_url.'index.php?page=dashboard&section=testi-delete&id='.$value['id_testimoni'].'" class="btn btn-sm btn-danger">Hapus</a></td>
-											</tr>';
+                            <a href="'.$base_url.'index.php?page=dashboard&section=testi-edit&id='.$value["id_testimoni"].'" class="btn btn-sm btn-primary ml-1">Edit</a>
+							<a href="'.$base_url.'index.php?page=dashboard&section=testi-delete&id='.$value["id_testimoni"].'" class="btn btn-sm btn-danger">Hapus</a></td>
+						</tr>';
                     }
                     ?>
                 
